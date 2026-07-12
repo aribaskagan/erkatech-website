@@ -110,37 +110,21 @@
     window.addEventListener("resize", updateScrollbar);
     updateScrollbar();
 
-    /* ---------- Tile modal ---------- */
-    const modal = document.getElementById("modal");
-    const modalImage = document.getElementById("modal-image");
-    const modalTitle = document.getElementById("modal-title");
-    const modalDesc = document.getElementById("modal-desc");
-    const modalClose = document.getElementById("modal-close");
-
-    document.querySelectorAll(".tile[data-modal]").forEach((tile) => {
-        tile.addEventListener("click", () => {
-            const key = tile.getAttribute("data-modal");
-            const data = modalContent[currentLang][key];
-            if (!data) return;
-            modalImage.src = data.img;
-            modalImage.alt = data.title;
-            modalTitle.textContent = data.title;
-            modalDesc.textContent = data.desc;
-            modal.classList.add("show");
-            document.body.style.overflow = "hidden";
+    /* ---------- Prototype video ---------- */
+    const prototypeVideo = document.getElementById("prototype-video");
+    if (prototypeVideo) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    prototypeVideo.play().catch(() => {});
+                } else {
+                    prototypeVideo.pause();
+                }
+            });
+        }, { threshold: 0.55 });
+        videoObserver.observe(prototypeVideo);
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) prototypeVideo.pause();
         });
-    });
-
-    function closeModal() {
-        modal.classList.remove("show");
-        document.body.style.overflow = "";
     }
-
-    modalClose && modalClose.addEventListener("click", closeModal);
-    modal && modal.addEventListener("click", (e) => {
-        if (e.target === modal) closeModal();
-    });
-    window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModal();
-    });
 })();

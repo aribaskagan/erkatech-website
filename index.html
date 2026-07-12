@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ErkaTech — Manyetik Dokunsal Sensör Teknolojisi</title>
-<meta name="description" content="ErkaTech, Hall-effect tabanlı esnek manyetik dokunsal sensörlerle robotlara dokunma duyusu kazandıran bir erken aşama girişimdir.">
+<meta name="description" content="ErkaTech, robotların teması uzamsal olarak anlamasına yardımcı olan esnek manyetik dokunsal yüzeyler geliştirir.">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -18,7 +18,7 @@
     <nav class="main-nav">
         <a href="#teknoloji" data-i18n="nav.tech">Teknoloji</a>
         <a href="#prototip" data-i18n="nav.proto">Prototip</a>
-        <a href="#hakkimizda" data-i18n="nav.about">Hakkımızda</a>
+        <a href="#vizyon" data-i18n="nav.vision">Vizyon</a>
         <a href="#iletisim" data-i18n="nav.contact">İletişim</a>
     </nav>
     <div class="header-actions">
@@ -31,20 +31,25 @@
 </header>
 
 <main id="top">
-
-    <!-- HERO -->
     <section class="hero">
         <div class="hero-headline">
             <div class="line"><h1 data-i18n="hero.line1">DOKUNMAYI</h1></div>
             <div class="line"><h1 data-i18n="hero.line2">YENİDEN TASARLIYORUZ</h1></div>
         </div>
         <div class="hero-sub">
-            <p data-i18n="hero.sub">Hall-effect tabanlı, esnek ve düşük maliyetli manyetik dokunsal sensörlerle robotlara gerçek zamanlı basınç ve dokunma duyusu kazandırıyoruz.</p>
+            <p data-i18n="hero.sub">Robotların temasın nerede, nasıl ve ne kadar gerçekleştiğini anlayabilmesi için esnek manyetik dokunsal yüzeyler geliştiriyoruz.</p>
         </div>
         <div class="scroll-cue" data-i18n="hero.scroll">Kaydır</div>
     </section>
 
-    <!-- SCROLL ZOOM SURFACE PANEL -->
+    <section class="story-intro">
+        <div class="story-intro-copy reveal">
+            <span class="story-index" data-i18n="problem.eyebrow">Başlangıç noktası</span>
+            <h2 data-i18n="problem.title">Robotlar hassas hareket eder. Ama neye dokunduklarını hâlâ hissetmezler.</h2>
+            <p data-i18n="problem.body">Görme, nesnenin nerede olduğunu söyler. Kuvvet, temasın gerçekleştiğini söyler. Ancak güvenli bir kavrama için basıncın nerede ve nasıl dağıldığını anlamak gerekir.</p>
+        </div>
+    </section>
+
     <section class="panel-section" id="panel-section">
         <div class="panel-sticky">
             <div class="panel-frame" id="panel-frame">
@@ -54,13 +59,20 @@
                 </div>
             </div>
             <div class="panel-caption" id="panel-caption">
-                <h4 data-i18n="panel.caption">Her temas, gerçek zamanlı ve uzamsal olarak algılanır.</h4>
-                <span data-i18n="panel.tag">Canlı Yüzey · 2026</span>
+                <h4 data-i18n="panel.caption">Temas, yalnızca bir an değil; yüzey boyunca yayılan uzamsal bir sinyaldir.</h4>
+                <span data-i18n="panel.tag">01 · Teması okumak</span>
             </div>
         </div>
     </section>
 
-    <!-- MAGNET MATRIX CHAPTER -->
+    <section class="story-bridge" id="teknoloji">
+        <div class="story-bridge-copy reveal">
+            <span class="story-index" data-i18n="mechanism.eyebrow">Ölçülebilir dokunma</span>
+            <h2 data-i18n="mechanism.title">Bir mesafe değişimi, anlamlı bir sinyale dönüşür.</h2>
+            <p data-i18n="mechanism.body">Esnek katman sıkıştığında, mıknatıslar ile alttaki Hall-effect sensörleri arasındaki mesafe değişir. ErkaTech bu küçük değişimi, yüzeyin tamamını açıklayan bir basınç haritasına çevirir.</p>
+        </div>
+    </section>
+
     <section class="magnet-section" id="magnet-matrix">
         <div class="magnet-sticky">
             <div class="magnet-frame">
@@ -71,89 +83,54 @@
             </div>
             <div class="magnet-caption" id="magnet-caption">
                 <div>
-                    <span class="magnet-eyebrow" data-i18n="magnet.eyebrow">01 · Manyetik Prensip</span>
+                    <span class="magnet-eyebrow" data-i18n="magnet.eyebrow">02 · Manyetik prensip</span>
                     <h2 data-i18n="magnet.title">Mıknatıs Matrisi</h2>
                 </div>
-                <p data-i18n="magnet.caption">Mıknatıs dizisi, alttaki sensör yüzeyi için değişken bir alan oluşturur.</p>
+                <p data-i18n="magnet.caption">Mıknatıs dizisi, alttaki sensör yüzeyinin okuyabildiği değişken bir alan oluşturur.</p>
             </div>
         </div>
     </section>
 
-    <!-- TECH / HOW IT WORKS -->
-    <section class="block" id="teknoloji">
-        <div class="block-head reveal">
-            <h2 data-i18n="tech.title">Nasıl Çalışır</h2>
-            <p data-i18n="tech.desc">Dört katmanlı basit bir yapı: mıknatıs, esnek sünger, Hall-effect sensör dizisi ve gerçek zamanlı basınç okuması. Her kutucuğa tıklayarak detayına bakabilirsin.</p>
+    <section class="material-proof">
+        <div class="material-proof-media reveal">
+            <img src="assets/sensor-module.png" alt="ErkaTech esnek sünger katmanı prototipi">
         </div>
-        <div class="tile-grid reveal">
-            <a class="tile tile-link magnet-tile" href="#magnet-matrix">
-                <div class="tile-thumb magnet-tile-visual" aria-hidden="true"></div>
-                <div class="tile-text">
-                    <div class="step">01</div>
-                    <h3 data-i18n="tech.tile1">Mıknatıs Matrisi</h3>
-                </div>
-            </a>
-            <div class="tile" data-modal="sponge">
-                <div class="tile-thumb"><img src="assets/sensor-module.png" alt="Esnek sünger katmanı"></div>
-                <div class="tile-text">
-                    <div class="step">02</div>
-                    <h3 data-i18n="tech.tile2">Esnek Sünger Katmanı</h3>
-                </div>
-            </div>
-            <div class="tile" data-modal="hall">
-                <div class="tile-thumb"><img src="assets/infographic.jpeg" alt="Hall-effect sensör dizisi"></div>
-                <div class="tile-text">
-                    <div class="step">03</div>
-                    <h3 data-i18n="tech.tile3">Hall-Effect Sensör Dizisi</h3>
-                </div>
-            </div>
-            <div class="tile" data-modal="heatmap">
-                <div class="tile-thumb"><img src="assets/heatmap.png" alt="Gerçek zamanlı basınç haritası"></div>
-                <div class="tile-text">
-                    <div class="step">04</div>
-                    <h3 data-i18n="tech.tile4">Gerçek Zamanlı Basınç Haritası</h3>
-                </div>
-            </div>
+        <div class="material-proof-copy reveal">
+            <span class="story-index" data-i18n="material.eyebrow">Esnek katman</span>
+            <h2 data-i18n="material.title">Yüzey, sertliğe değil uyuma dayanır.</h2>
+            <p data-i18n="material.body1">Esnek sünger katmanı, teması tek bir noktaya indirgemez. Basıncı karşılar, dağıtır ve manyetik alanın anlamlı biçimde değişmesini sağlar.</p>
+            <p data-i18n="material.body2">Bu fiziksel katman, duyusal yüzeyin farklı robotik biçimlere uyarlanabilmesi için tasarlanır.</p>
         </div>
     </section>
 
-    <!-- PROTOTYPE -->
-    <section class="block" id="prototip">
-        <div class="duo reveal">
-            <div class="duo-media">
-                <img src="assets/breadboard.png" alt="ErkaTech elektronik prototip breadboard">
-            </div>
-            <div class="duo-text">
-                <div class="eyebrow" data-i18n="proto.eyebrow">Atölyeden</div>
-                <h2 data-i18n="proto.title">Fikirden çalışan prototipe</h2>
-                <p data-i18n="proto.p1">Sensör dizisini kendi elektronik kartlarımız üzerinde tasarlayıp test ediyoruz. Basınç verisini gerçek zamanlı okuyup görselleştirebiliyoruz.</p>
-                <p data-i18n="proto.p2">Hedefimiz: neredeyse her yüzeye uygulanabilen, düşük maliyetli ve esnek bir dokunsal sensör katmanı.</p>
-                <div class="stat-row">
-                    <div><strong>3×3</strong><span data-i18n="proto.stat1">Sensör matrisi (mevcut prototip)</span></div>
-                    <div><strong>&lt;1</strong><span data-i18n="proto.stat2">Düşük maliyet hedefi (birim başına)</span></div>
-                    <div><strong>~%100</strong><span data-i18n="proto.stat3">Esnek yüzey kaplama potansiyeli</span></div>
-                </div>
-            </div>
+    <section class="demo-proof" id="prototip">
+        <div class="demo-proof-copy reveal">
+            <span class="story-index" data-i18n="demo.eyebrow">Fiziksel prototip</span>
+            <h2 data-i18n="demo.title">Bu bir konsept render değil.</h2>
+            <p data-i18n="demo.body1">Fiziksel yüzeye uygulanan basınç, ekrandaki uzamsal haritada aynı anda karşılık bulur.</p>
+            <p data-i18n="demo.body2">Gerçek sistem, yüzeydeki değişimi canlı bir basınç tepkisine dönüştürür.</p>
+        </div>
+        <div class="demo-video-wrap reveal">
+            <video class="demo-video" id="prototype-video" controls muted playsinline preload="metadata" loop>
+                <source src="assets/prototype-pressure-demo.mp4" type="video/mp4">
+                <span data-i18n="demo.unsupported">Tarayıcın video oynatmayı desteklemiyor.</span>
+            </video>
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="block about-block" id="hakkimizda">
-        <div class="block-head reveal">
-            <h2 data-i18n="about.title">Hakkımızda</h2>
-        </div>
-        <div class="reveal">
-            <p data-i18n="about.p1">ErkaTech, robotlara insan derisine benzer bir dokunma duyusu kazandırmayı hedefleyen erken aşama bir girişim çalışmasıdır. Henüz şirketleşme sürecindeyiz.</p>
-            <p class="muted" data-i18n="about.p2">Bu sayfadaki içerik ve görseller ilk prototip çalışmalarımızdan oluşuyor; ekip ve şirket bilgileri yakında güncellenecek.</p>
+    <section class="vision" id="vizyon">
+        <div class="vision-copy reveal">
+            <span class="vision-index" data-i18n="vision.eyebrow">Vizyon</span>
+            <h2 data-i18n="vision.title">Robotlar, temasın sonuçlarını daha güvenli okuyabilmeli.</h2>
+            <p data-i18n="vision.body1">Hedefimiz, kırılgan ve değişken nesnelerle daha hassas, daha güvenli bir ilişki kurabilen robotik sistemlerdir.</p>
+            <p data-i18n="vision.body2">Esnek duyusal katmanımızın farklı robotik yüzeylere uyarlanmasıyla, dokunma yalnızca bir eklenti değil, tasarımın doğal bir parçası hâline gelir.</p>
         </div>
     </section>
 
-    <!-- CONTACT / CTA -->
     <section class="cta" id="iletisim">
         <h2 data-i18n="cta.title">Bizimle çalışmak veya yatırım hakkında konuşmak ister misin?</h2>
         <a class="button" href="mailto:hello@erkatech.co" data-i18n="cta.button">İletişime Geç</a>
     </section>
-
 </main>
 
 <footer>
@@ -165,16 +142,6 @@
         <span data-i18n="footer.rights">© 2026 ErkaTech. Tüm hakları saklıdır.</span>
     </div>
 </footer>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-    <div class="modal-close" id="modal-close" data-i18n="modal.close">Kapat ✕</div>
-    <div class="modal-inner">
-        <img id="modal-image" src="" alt="">
-        <h3 id="modal-title"></h3>
-        <p id="modal-desc"></p>
-    </div>
-</div>
 
 <div id="scrollbar"><div id="scrollbar-handle"></div></div>
 

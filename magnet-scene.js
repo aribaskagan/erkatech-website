@@ -173,7 +173,9 @@
         const rect = section.getBoundingClientRect();
         const travel = rect.height - window.innerHeight;
         scrollProgress = travel > 0 ? Math.min(Math.max(-rect.top / travel, 0), 1) : 0;
-        caption.classList.toggle("visible", scrollProgress > 0.34 && scrollProgress < 0.98);
+        const steps = caption.querySelectorAll(".scene-step");
+        const activeIndex = Math.min(steps.length - 1, Math.floor(scrollProgress * steps.length));
+        steps.forEach((step, index) => step.classList.toggle("active", index === activeIndex));
     }
 
     function resize() {

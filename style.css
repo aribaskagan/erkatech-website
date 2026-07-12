@@ -174,26 +174,70 @@ nav.main-nav a:hover { opacity: 1; }
 
 /* ===== Scroll-zoom live surface panel ===== */
 .panel-section {
-    height: 200vh;
+    height: 175vh;
     position: relative;
 }
 .panel-sticky {
     position: sticky;
     top: 0;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0 8vw;
     overflow: hidden;
 }
+.scene-layout {
+    width: min(1440px, 100%);
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+    align-items: center;
+    gap: clamp(2.5rem, 8vw, 9rem);
+}
+.scene-copy {
+    position: relative;
+    min-height: 260px;
+}
+.scene-index {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--gray);
+    font-size: 0.73rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.scene-step {
+    position: absolute;
+    inset: 2rem 0 0;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+    pointer-events: none;
+}
+.scene-step.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.scene-step h2 {
+    max-width: 11ch;
+    font-size: clamp(2.15rem, 4vw, 4.6rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+.scene-step p {
+    max-width: 32ch;
+    margin-top: 1.35rem;
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.6;
+}
 .panel-frame {
-    width: 42vw;
-    max-width: 620px;
-    aspect-ratio: 4/3;
-    border-radius: 18px;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1.12 / 1;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.18);
-    will-change: transform, border-radius;
+    box-shadow: none;
 }
 .surface-stage {
     width: 100%;
@@ -237,30 +281,9 @@ nav.main-nav a:hover { opacity: 1; }
 }
 .surface-stage.is-fallback .surface-fallback-message { display: block; }
 .surface-stage.is-fallback canvas { display: none; }
-.panel-caption {
-    position: absolute;
-    bottom: 8vh;
-    left: 5vw;
-    right: 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 0.85rem;
-    color: var(--gray);
-    opacity: 0;
-    transition: opacity 0.6s var(--ease);
-}
-.panel-caption.visible { opacity: 1; }
-.panel-caption h4 {
-    font-size: 1.4rem;
-    color: var(--fg);
-    font-weight: 700;
-    max-width: 420px;
-}
-
 /* ===== Scroll-pinned magnet matrix chapter ===== */
 .magnet-section {
-    height: 180vh;
+    height: 165vh;
     position: relative;
     background: #f7f7f5;
 }
@@ -268,17 +291,15 @@ nav.main-nav a:hover { opacity: 1; }
     position: sticky;
     top: 0;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0 8vw;
     overflow: hidden;
 }
 .magnet-frame {
-    width: min(64vw, 920px);
-    aspect-ratio: 16 / 10;
+    width: 100%;
+    aspect-ratio: 1.12 / 1;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 34px 80px rgba(0,0,0,0.13);
+    border-radius: 8px;
+    box-shadow: none;
 }
 .magnet-stage {
     position: relative;
@@ -321,58 +342,16 @@ nav.main-nav a:hover { opacity: 1; }
 }
 .magnet-stage.is-fallback .magnet-fallback-message { display: block; }
 .magnet-stage.is-fallback canvas { display: none; }
-.magnet-caption {
-    position: absolute;
-    left: 5vw;
-    right: 5vw;
-    bottom: 7vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 2rem;
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
-    pointer-events: none;
-}
-.magnet-caption.visible { opacity: 1; transform: translateY(0); }
-.magnet-eyebrow {
-    display: block;
-    margin-bottom: 0.65rem;
-    color: var(--gray);
-    font-size: 0.73rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-.magnet-caption h2 {
-    font-size: clamp(2rem, 4vw, 3.6rem);
-    letter-spacing: -0.03em;
-}
-.magnet-caption p {
-    max-width: 370px;
-    color: var(--gray);
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
 /* ===== Editorial story sections ===== */
 .story-intro,
 .story-bridge {
-    padding: 18vh 5vw;
+    padding: 15vh 10vw;
 }
 .story-intro-copy,
 .story-bridge-copy {
-    display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.55fr);
-    column-gap: clamp(2rem, 10vw, 13rem);
-    align-items: end;
-    max-width: 1180px;
-    margin: 0 auto;
+    max-width: 820px;
 }
 .story-index {
-    grid-column: 2;
-    grid-row: 1;
     display: block;
     margin-bottom: 1rem;
     color: var(--gray);
@@ -383,24 +362,23 @@ nav.main-nav a:hover { opacity: 1; }
 }
 .story-intro h2,
 .story-bridge h2 {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    max-width: 13ch;
-    font-size: clamp(2.35rem, 5.2vw, 5.3rem);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
+    max-width: 12ch;
+    font-size: clamp(2.3rem, 4.5vw, 4.7rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
 }
-.story-bridge h2 { font-size: clamp(2.1rem, 4.6vw, 4.5rem); }
+.story-bridge h2 { font-size: clamp(2.15rem, 4vw, 4.2rem); }
 .story-intro p,
 .story-bridge p {
-    grid-column: 2;
+    max-width: 52ch;
+    margin-top: 1.5rem;
     color: var(--gray);
     font-size: 1rem;
     line-height: 1.65;
 }
 .story-bridge {
-    padding-top: 20vh;
-    padding-bottom: 18vh;
+    padding-top: 14vh;
+    padding-bottom: 14vh;
     background: var(--panel-bg);
 }
 .material-proof,
@@ -821,9 +799,17 @@ footer .foot-links { display: flex; gap: 1.6rem; }
     nav.main-nav { display: none; }
     .tile-grid { grid-template-columns: repeat(2, 1fr); }
     .duo { grid-template-columns: 1fr; }
-    .panel-frame { width: 84vw; }
-    .magnet-frame { width: 86vw; }
-    .magnet-caption { align-items: flex-start; flex-direction: column; gap: 0.8rem; }
+    .panel-sticky,
+    .magnet-sticky { padding: 0 7vw; }
+    .scene-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+        align-content: center;
+    }
+    .scene-copy { min-height: 200px; }
+    .scene-step h2 { font-size: clamp(2rem, 9vw, 3.1rem); }
+    .scene-step p { margin-top: 1rem; }
     .story-intro,
     .story-bridge { padding: 15vh 7vw; }
     .story-intro-copy,

@@ -1,10 +1,11 @@
 (function () {
     "use strict";
 
+    const section = document.getElementById("panel-section");
     const stage = document.getElementById("surface-stage");
     const canvas = document.getElementById("surface-canvas");
 
-    if (!stage || !canvas || !window.THREE) {
+    if (!section || !stage || !canvas || !window.THREE) {
         if (stage) stage.classList.add("is-fallback");
         return;
     }
@@ -192,11 +193,18 @@
     }
 
     let isVisible = false;
-    function setCamera(milliseconds) {
-        const orbit = milliseconds * (Math.PI * 2 / (36000 / motionSpeed)) + 0.55;
+    let scrollProgress = 0;
+    function setCamera() {
+        const orbit = 0.55 + scrollProgress * Math.PI * 0.9;
         const radius = 12.4;
         camera.position.set(Math.cos(orbit) * radius, 9.6, Math.sin(orbit) * radius);
         camera.lookAt(0, -0.14, 0);
+    }
+
+    function updateScrollProgress() {
+        const rect = section.getBoundingClientRect();
+        const travel = rect.height - window.innerHeight;
+        scrollProgress = travel > 0 ? Math.min(Math.max(-rect.top / travel, 0), 1) : 0;
     }
 
     const observer = new IntersectionObserver((entries) => {
@@ -210,11 +218,26 @@
         if (isVisible && reducedMotion) render(2200);
     });
 
-    new ResizeObserver(resize).observe(stage);
+    let scrollTicking = false;
+    window.addEventListener("scroll", () => {
+        if (scrollTicking) return;
+        window.requestAnimationFrame(() => {
+            updateScrollProgress();
+            if (isVisible) render(reducedMotion ? 2200 : performance.now());
+            scrollTicking = false;
+        });
+        scrollTicking = true;
+    });
+
+    new ResizeObserver(() => {
+        resize();
+        updateScrollProgress();
+        render(reducedMotion ? 2200 : performance.now());
+    }).observe(stage);
 
     function render(milliseconds) {
         updateSurface(milliseconds);
-        setCamera(reducedMotion ? 2200 : milliseconds);
+        setCamera();
         renderer.render(scene, camera);
     }
 
@@ -225,6 +248,7 @@
     }
 
     resize();
+    updateScrollProgress();
     render(2200);
     window.requestAnimationFrame(animate);
 }());

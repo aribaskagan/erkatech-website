@@ -58,6 +58,13 @@
     const panelFrame = document.getElementById("panel-frame");
     const panelCaption = document.getElementById("panel-caption");
 
+    function setSceneStep(container, progress) {
+        if (!container) return;
+        const steps = container.querySelectorAll(".scene-step");
+        const activeIndex = Math.min(steps.length - 1, Math.floor(progress * steps.length));
+        steps.forEach((step, index) => step.classList.toggle("active", index === activeIndex));
+    }
+
     function updatePanel() {
         if (!panelSection || !panelFrame) return;
 
@@ -67,16 +74,8 @@
         const scrolled = Math.min(Math.max(-rect.top, 0), total);
         const progress = total > 0 ? scrolled / total : 0;
 
-        // Ease the growth: fast in the middle of the section
-        const scale = 1 + progress * 1.35;
-        const radius = 18 - progress * 18;
-
-        panelFrame.style.transform = `scale(${scale})`;
-        panelFrame.style.borderRadius = `${radius}px`;
-
-        if (panelCaption) {
-            panelCaption.classList.toggle("visible", progress > 0.55 && progress < 0.97);
-        }
+        panelFrame.style.transform = "";
+        setSceneStep(panelCaption, progress);
     }
 
     let panelTicking = false;

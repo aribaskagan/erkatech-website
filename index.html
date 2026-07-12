@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ErkaTech — Manyetik Dokunsal Sensör Teknolojisi</title>
+<meta name="description" content="ErkaTech, Hall-effect tabanlı esnek manyetik dokunsal sensörlerle robotlara dokunma duyusu kazandıran bir erken aşama girişimdir.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a href="#top" class="logo-lockup">
+        <span class="logo-mark"><img src="assets/logo.svg" alt="ErkaTech logo"></span>
+        <span>ERKATECH</span>
+    </a>
+    <nav class="main-nav">
+        <a href="#teknoloji" data-i18n="nav.tech">Teknoloji</a>
+        <a href="#prototip" data-i18n="nav.proto">Prototip</a>
+        <a href="#hakkimizda" data-i18n="nav.about">Hakkımızda</a>
+        <a href="#iletisim" data-i18n="nav.contact">İletişim</a>
+    </nav>
+    <div class="header-actions">
+        <div class="lang-toggle">
+            <button data-lang="tr" class="active">TR</button>
+            <span aria-hidden="true">/</span>
+            <button data-lang="en">EN</button>
+        </div>
+    </div>
+</header>
+
+<main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-headline">
+            <div class="line"><h1 data-i18n="hero.line1">DOKUNMAYI</h1></div>
+            <div class="line"><h1 data-i18n="hero.line2">YENİDEN TASARLIYORUZ</h1></div>
+        </div>
+        <div class="hero-sub">
+            <p data-i18n="hero.sub">Hall-effect tabanlı, esnek ve düşük maliyetli manyetik dokunsal sensörlerle robotlara gerçek zamanlı basınç ve dokunma duyusu kazandırıyoruz.</p>
+        </div>
+        <div class="scroll-cue" data-i18n="hero.scroll">Kaydır</div>
+    </section>
+
+    <!-- SCROLL ZOOM PHOTO PANEL -->
+    <section class="panel-section" id="panel-section">
+        <div class="panel-sticky">
+            <div class="panel-frame" id="panel-frame">
+                <img src="assets/robot-arm.jpeg" alt="ErkaTech sensörlü robot kol prototipi">
+            </div>
+            <div class="panel-caption" id="panel-caption">
+                <h4 data-i18n="panel.caption">Sensörlerimiz gerçek bir robot koluna entegre edilerek test ediliyor.</h4>
+                <span data-i18n="panel.tag">Prototip · 2026</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH / HOW IT WORKS -->
+    <section class="block" id="teknoloji">
+        <div class="block-head reveal">
+            <h2 data-i18n="tech.title">Nasıl Çalışır</h2>
+            <p data-i18n="tech.desc">Dört katmanlı basit bir yapı: mıknatıs, esnek sünger, Hall-effect sensör dizisi ve gerçek zamanlı basınç okuması. Her kutucuğa tıklayarak detayına bakabilirsin.</p>
+        </div>
+        <div class="tile-grid reveal">
+            <div class="tile" data-modal="magnet">
+                <div class="tile-thumb"><img src="assets/layers-diagram.jpeg" alt="Mıknatıs matrisi katmanı"></div>
+                <div class="tile-text">
+                    <div class="step">01</div>
+                    <h3 data-i18n="tech.tile1">Mıknatıs Matrisi</h3>
+                </div>
+            </div>
+            <div class="tile" data-modal="sponge">
+                <div class="tile-thumb"><img src="assets/sensor-module.png" alt="Esnek sünger katmanı"></div>
+                <div class="tile-text">
+                    <div class="step">02</div>
+                    <h3 data-i18n="tech.tile2">Esnek Sünger Katmanı</h3>
+                </div>
+            </div>
+            <div class="tile" data-modal="hall">
+                <div class="tile-thumb"><img src="assets/infographic.jpeg" alt="Hall-effect sensör dizisi"></div>
+                <div class="tile-text">
+                    <div class="step">03</div>
+                    <h3 data-i18n="tech.tile3">Hall-Effect Sensör Dizisi</h3>
+                </div>
+            </div>
+            <div class="tile" data-modal="heatmap">
+                <div class="tile-thumb"><img src="assets/heatmap.png" alt="Gerçek zamanlı basınç haritası"></div>
+                <div class="tile-text">
+                    <div class="step">04</div>
+                    <h3 data-i18n="tech.tile4">Gerçek Zamanlı Basınç Haritası</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROTOTYPE -->
+    <section class="block" id="prototip">
+        <div class="duo reveal">
+            <div class="duo-media">
+                <img src="assets/breadboard.png" alt="ErkaTech elektronik prototip breadboard">
+            </div>
+            <div class="duo-text">
+                <div class="eyebrow" data-i18n="proto.eyebrow">Atölyeden</div>
+                <h2 data-i18n="proto.title">Fikirden çalışan prototipe</h2>
+                <p data-i18n="proto.p1">Sensör dizisini kendi elektronik kartlarımız üzerinde tasarlayıp test ediyoruz. Basınç verisini gerçek zamanlı okuyup görselleştirebiliyoruz.</p>
+                <p data-i18n="proto.p2">Hedefimiz: neredeyse her yüzeye uygulanabilen, düşük maliyetli ve esnek bir dokunsal sensör katmanı.</p>
+                <div class="stat-row">
+                    <div><strong>3×3</strong><span data-i18n="proto.stat1">Sensör matrisi (mevcut prototip)</span></div>
+                    <div><strong>&lt;1</strong><span data-i18n="proto.stat2">Düşük maliyet hedefi (birim başına)</span></div>
+                    <div><strong>~%100</strong><span data-i18n="proto.stat3">Esnek yüzey kaplama potansiyeli</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="block about-block" id="hakkimizda">
+        <div class="block-head reveal">
+            <h2 data-i18n="about.title">Hakkımızda</h2>
+        </div>
+        <div class="reveal">
+            <p data-i18n="about.p1">ErkaTech, robotlara insan derisine benzer bir dokunma duyusu kazandırmayı hedefleyen erken aşama bir girişim çalışmasıdır. Henüz şirketleşme sürecindeyiz.</p>
+            <p class="muted" data-i18n="about.p2">Bu sayfadaki içerik ve görseller ilk prototip çalışmalarımızdan oluşuyor; ekip ve şirket bilgileri yakında güncellenecek.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section class="cta" id="iletisim">
+        <h2 data-i18n="cta.title">Bizimle çalışmak veya yatırım hakkında konuşmak ister misin?</h2>
+        <a class="button" href="mailto:hello@erkatech.co" data-i18n="cta.button">İletişime Geç</a>
+    </section>
+
+</main>
+
+<footer>
+    <a href="#top" class="logo-lockup">
+        <span class="logo-mark"><img src="assets/logo.svg" alt="ErkaTech"></span>
+        <span>ERKATECH</span>
+    </a>
+    <div class="foot-links">
+        <span data-i18n="footer.rights">© 2026 ErkaTech. Tüm hakları saklıdır.</span>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-close" id="modal-close" data-i18n="modal.close">Kapat ✕</div>
+    <div class="modal-inner">
+        <img id="modal-image" src="" alt="">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+    </div>
+</div>
+
+<div id="scrollbar"><div id="scrollbar-handle"></div></div>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

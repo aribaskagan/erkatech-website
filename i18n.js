@@ -11,6 +11,10 @@ const translations = {
     "panel.caption": "Her temas, gerçek zamanlı ve uzamsal olarak algılanır.",
     "panel.tag": "Canlı Yüzey · 2026",
     "panel.fallback": "Bu tarayıcı canlı yüzey görünümünü desteklemiyor.",
+    "magnet.eyebrow": "01 · Manyetik Prensip",
+    "magnet.title": "Mıknatıs Matrisi",
+    "magnet.caption": "Mıknatıs dizisi, alttaki sensör yüzeyi için değişken bir alan oluşturur.",
+    "magnet.fallback": "Bu tarayıcı manyetik alan görünümünü desteklemiyor.",
     "tech.title": "Nasıl Çalışır",
     "tech.desc": "Dört katmanlı basit bir yapı: mıknatıs, esnek sünger, Hall-effect sensör dizisi ve gerçek zamanlı basınç okuması. Her kutucuğa tıklayarak detayına bakabilirsin.",
     "tech.tile1": "Mıknatıs Matrisi",
@@ -44,6 +48,10 @@ const translations = {
     "panel.caption": "Every touch is sensed in real time and in space.",
     "panel.tag": "Live Surface · 2026",
     "panel.fallback": "This browser does not support the live surface view.",
+    "magnet.eyebrow": "01 · Magnetic Principle",
+    "magnet.title": "Magnet Matrix",
+    "magnet.caption": "A magnetic array creates a variable field for the sensing surface below.",
+    "magnet.fallback": "This browser does not support the magnetic field view.",
     "tech.title": "How It Works",
     "tech.desc": "A simple four-layer structure: magnet, flexible sponge, Hall-effect sensor array, and real-time pressure readout. Click any tile for details.",
     "tech.tile1": "Magnet Matrix",
@@ -69,11 +77,6 @@ const translations = {
 
 const modalContent = {
   tr: {
-    magnet: {
-      title: "Mıknatıs Matrisi",
-      desc: "Üst katmandaki küçük mıknatıslar N/S kutupları dönüşümlü dizilerek altındaki sensör dizisi için değişken bir manyetik alan oluşturur.",
-      img: "assets/layers-diagram.jpeg"
-    },
     sponge: {
       title: "Esnek Sünger Katmanı",
       desc: "Mıknatıs ile sensör arasındaki sünger katmanı basınçla sıkışarak mesafeyi değiştirir; bu da esneklik ve yumuşak dokunuş hissi sağlar.",
@@ -91,11 +94,6 @@ const modalContent = {
     }
   },
   en: {
-    magnet: {
-      title: "Magnet Matrix",
-      desc: "Small magnets in the top layer alternate N/S poles, creating a variable magnetic field for the sensor array beneath.",
-      img: "assets/layers-diagram.jpeg"
-    },
     sponge: {
       title: "Flexible Sponge Layer",
       desc: "The sponge layer between magnet and sensor compresses under pressure, changing distance — giving flexibility and a soft touch feel.",

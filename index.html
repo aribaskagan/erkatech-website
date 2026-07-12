@@ -60,6 +60,25 @@
         </div>
     </section>
 
+    <!-- MAGNET MATRIX CHAPTER -->
+    <section class="magnet-section" id="magnet-matrix">
+        <div class="magnet-sticky">
+            <div class="magnet-frame">
+                <div class="magnet-stage" id="magnet-stage">
+                    <canvas id="magnet-canvas" aria-hidden="true"></canvas>
+                    <p class="magnet-fallback-message" data-i18n="magnet.fallback">Bu tarayıcı manyetik alan görünümünü desteklemiyor.</p>
+                </div>
+            </div>
+            <div class="magnet-caption" id="magnet-caption">
+                <div>
+                    <span class="magnet-eyebrow" data-i18n="magnet.eyebrow">01 · Manyetik Prensip</span>
+                    <h2 data-i18n="magnet.title">Mıknatıs Matrisi</h2>
+                </div>
+                <p data-i18n="magnet.caption">Mıknatıs dizisi, alttaki sensör yüzeyi için değişken bir alan oluşturur.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- TECH / HOW IT WORKS -->
     <section class="block" id="teknoloji">
         <div class="block-head reveal">
@@ -67,13 +86,13 @@
             <p data-i18n="tech.desc">Dört katmanlı basit bir yapı: mıknatıs, esnek sünger, Hall-effect sensör dizisi ve gerçek zamanlı basınç okuması. Her kutucuğa tıklayarak detayına bakabilirsin.</p>
         </div>
         <div class="tile-grid reveal">
-            <div class="tile" data-modal="magnet">
-                <div class="tile-thumb"><img src="assets/layers-diagram.jpeg" alt="Mıknatıs matrisi katmanı"></div>
+            <a class="tile tile-link magnet-tile" href="#magnet-matrix">
+                <div class="tile-thumb magnet-tile-visual" aria-hidden="true"></div>
                 <div class="tile-text">
                     <div class="step">01</div>
                     <h3 data-i18n="tech.tile1">Mıknatıs Matrisi</h3>
                 </div>
-            </div>
+            </a>
             <div class="tile" data-modal="sponge">
                 <div class="tile-thumb"><img src="assets/sensor-module.png" alt="Esnek sünger katmanı"></div>
                 <div class="tile-text">
@@ -162,6 +181,7 @@
 <script src="assets/vendor/three.min.js"></script>
 <script src="i18n.js"></script>
 <script src="surface-scene.js"></script>
+<script src="magnet-scene.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

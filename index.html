@@ -44,15 +44,18 @@
         <div class="scroll-cue" data-i18n="hero.scroll">Kaydır</div>
     </section>
 
-    <!-- SCROLL ZOOM PHOTO PANEL -->
+    <!-- SCROLL ZOOM SURFACE PANEL -->
     <section class="panel-section" id="panel-section">
         <div class="panel-sticky">
             <div class="panel-frame" id="panel-frame">
-                <img src="assets/robot-arm.jpeg" alt="ErkaTech sensörlü robot kol prototipi">
+                <div class="surface-stage" id="surface-stage">
+                    <canvas id="surface-canvas" aria-hidden="true"></canvas>
+                    <p class="surface-fallback-message" data-i18n="panel.fallback">Bu tarayıcı canlı yüzey görünümünü desteklemiyor.</p>
+                </div>
             </div>
             <div class="panel-caption" id="panel-caption">
-                <h4 data-i18n="panel.caption">Sensörlerimiz gerçek bir robot koluna entegre edilerek test ediliyor.</h4>
-                <span data-i18n="panel.tag">Prototip · 2026</span>
+                <h4 data-i18n="panel.caption">Her temas, gerçek zamanlı ve uzamsal olarak algılanır.</h4>
+                <span data-i18n="panel.tag">Canlı Yüzey · 2026</span>
             </div>
         </div>
     </section>
@@ -156,7 +159,9 @@
 
 <div id="scrollbar"><div id="scrollbar-handle"></div></div>
 
+<script src="assets/vendor/three.min.js"></script>
 <script src="i18n.js"></script>
+<script src="surface-scene.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

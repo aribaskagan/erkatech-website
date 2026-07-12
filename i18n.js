@@ -7,7 +7,6 @@ const translations = {
     "hero.line1": "DOKUNMAYI",
     "hero.line2": "YENİDEN TASARLIYORUZ",
     "hero.sub": "Robotların temasın nerede, nasıl ve ne kadar gerçekleştiğini anlayabilmesi için esnek manyetik dokunsal yüzeyler geliştiriyoruz.",
-    "hero.scroll": "Kaydır",
     "problem.eyebrow": "Başlangıç noktası",
     "problem.title": "Robotlar hassas hareket eder. Ama neye dokunduklarını hâlâ hissetmezler.",
     "problem.body": "Görme, nesnenin nerede olduğunu söyler. Kuvvet, temasın gerçekleştiğini söyler. Ancak güvenli bir kavrama için basıncın nerede ve nasıl dağıldığını anlamak gerekir.",
@@ -35,6 +34,7 @@ const translations = {
     "vision.body1": "Hedefimiz, kırılgan ve değişken nesnelerle daha hassas, daha güvenli bir ilişki kurabilen robotik sistemlerdir.",
     "vision.body2": "Esnek duyusal katmanımızın farklı robotik yüzeylere uyarlanmasıyla, dokunma yalnızca bir eklenti değil, tasarımın doğal bir parçası hâline gelir.",
     "vision.button": "İletişime Geç",
+    "supporters.title": "Destekçilerimiz",
     "cta.title": "Bizimle çalışmak veya yatırım hakkında konuşmak ister misin?",
     "cta.button": "İletişime Geç",
     "footer.rights": "© 2026 ErkaTech. Tüm hakları saklıdır."
@@ -47,7 +47,6 @@ const translations = {
     "hero.line1": "REDESIGNING",
     "hero.line2": "ROBOTIC TOUCH",
     "hero.sub": "We develop flexible magnetic tactile surfaces that help robots understand where, how, and how much contact occurs.",
-    "hero.scroll": "Scroll",
     "problem.eyebrow": "The starting point",
     "problem.title": "Robots move with precision. But they still do not feel what they touch.",
     "problem.body": "Vision tells a robot where an object is. Force tells it that contact happened. Safe grasping requires knowing where pressure is distributed and how it changes.",
@@ -75,6 +74,7 @@ const translations = {
     "vision.body1": "Our goal is robotic systems that can form a more precise, safer relationship with fragile and changing objects.",
     "vision.body2": "By adapting our flexible sensing layer to different robotic surfaces, touch becomes not an add-on but a natural part of the design.",
     "vision.button": "Get in touch",
+    "supporters.title": "Our supporters",
     "cta.title": "Want to work with us or talk about investing?",
     "cta.button": "Get in Touch",
     "footer.rights": "© 2026 ErkaTech. All rights reserved."

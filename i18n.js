@@ -42,6 +42,9 @@ const translations = {
     "supporters.title": "Destekçilerimiz",
     "cta.title": "Bizimle çalışmak veya yatırım hakkında konuşmak ister misin?",
     "cta.button": "İletişime Geç",
+    "contact.name": "Ad Soyad",
+    "contact.email": "E-posta",
+    "contact.message": "Mesaj",
     "footer.rights": "© 2026 ErkaTech. Tüm hakları saklıdır."
   },
   en: {
@@ -87,6 +90,9 @@ const translations = {
     "supporters.title": "Our supporters",
     "cta.title": "Want to work with us or talk about investing?",
     "cta.button": "Get in Touch",
+    "contact.name": "Full name",
+    "contact.email": "Email",
+    "contact.message": "Message",
     "footer.rights": "© 2026 ErkaTech. All rights reserved."
   }
 };

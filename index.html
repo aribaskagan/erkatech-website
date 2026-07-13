@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ErkaTech — Manyetik Dokunsal Sensör Teknolojisi</title>
+<title>ErkaTech</title>
 <meta name="description" content="ErkaTech, robotların teması uzamsal olarak anlamasına yardımcı olan esnek manyetik dokunsal yüzeyler geliştirir.">
-<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg?v=2">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,10 +42,15 @@
     </section>
 
     <section class="story-intro">
-        <div class="story-intro-copy reveal">
-            <span class="story-index" data-i18n="problem.eyebrow">Sorun</span>
-            <h2 data-i18n="problem.title">Robotlar hareketi bilir. Teması henüz anlamaz.</h2>
-            <p data-i18n="problem.body">Bir nesneye ulaşmak başka; onunla güvenle temas kurmak başka. Robotların, basıncın nerede yoğunlaştığını anlayan bir yüzeye ihtiyacı var.</p>
+        <div class="story-layout">
+            <div class="story-intro-copy reveal">
+                <span class="story-index" data-i18n="problem.eyebrow">Sorun</span>
+                <h2 data-i18n="problem.title">Robotlar hareketi bilir. Teması henüz anlamaz.</h2>
+                <p data-i18n="problem.body">Bir nesneye ulaşmak başka; onunla güvenle temas kurmak başka. Robotların, basıncın nerede yoğunlaştığını anlayan bir yüzeye ihtiyacı var.</p>
+            </div>
+            <figure class="story-visual reveal">
+                <img src="assets/problem-touch-gap.png" alt="" loading="lazy">
+            </figure>
         </div>
     </section>
 
@@ -74,10 +79,15 @@
     </section>
 
     <section class="story-bridge" id="teknoloji">
-        <div class="story-bridge-copy reveal">
-            <span class="story-index" data-i18n="mechanism.eyebrow">Ölçülebilir dokunma</span>
-            <h2 data-i18n="mechanism.title">Bir mesafe değişimi, anlamlı bir sinyale dönüşür.</h2>
-            <p data-i18n="mechanism.body">Esnek katman sıkıştığında, mıknatıslar ile alttaki Hall-effect sensörleri arasındaki mesafe değişir. ErkaTech bu küçük değişimi, yüzeyin tamamını açıklayan bir basınç haritasına çevirir.</p>
+        <div class="story-layout">
+            <div class="story-bridge-copy reveal">
+                <span class="story-index" data-i18n="mechanism.eyebrow">Ölçülebilir dokunma</span>
+                <h2 data-i18n="mechanism.title">Bir mesafe değişimi, anlamlı bir sinyale dönüşür.</h2>
+                <p data-i18n="mechanism.body">Esnek katman sıkıştığında, mıknatıslar ile alttaki Hall-effect sensörleri arasındaki mesafe değişir. ErkaTech bu küçük değişimi, yüzeyin tamamını açıklayan bir basınç haritasına çevirir.</p>
+            </div>
+            <figure class="story-visual reveal">
+                <img src="assets/mechanism-distance-signal.png" alt="" loading="lazy">
+            </figure>
         </div>
     </section>
 
@@ -133,15 +143,21 @@
     </section>
 
     <section class="vision" id="vizyon">
-        <div class="vision-copy reveal">
-            <span class="vision-index" data-i18n="vision.eyebrow">Vizyon</span>
-            <h2 data-i18n="vision.title">Robotlar, temasın sonuçlarını daha güvenli okuyabilmeli.</h2>
-            <p data-i18n="vision.body1">Hedefimiz, kırılgan ve değişken nesnelerle daha hassas, daha güvenli bir ilişki kurabilen robotik sistemlerdir.</p>
-            <p data-i18n="vision.body2">Esnek duyusal katmanımızın farklı robotik yüzeylere uyarlanmasıyla, dokunma yalnızca bir eklenti değil, tasarımın doğal bir parçası hâline gelir.</p>
+        <div class="vision-layout">
+            <div class="vision-copy reveal">
+                <span class="vision-index" data-i18n="vision.eyebrow">Vizyon</span>
+                <h2 data-i18n="vision.title">Robotlar, temasın sonuçlarını daha güvenli okuyabilmeli.</h2>
+                <p data-i18n="vision.body1">Hedefimiz, kırılgan ve değişken nesnelerle daha hassas, daha güvenli bir ilişki kurabilen robotik sistemlerdir.</p>
+                <p data-i18n="vision.body2">Esnek duyusal katmanımızın farklı robotik yüzeylere uyarlanmasıyla, dokunma yalnızca bir eklenti değil, tasarımın doğal bir parçası hâline gelir.</p>
+            </div>
+            <figure class="vision-image reveal">
+                <img src="assets/vision-touch-concept.png" alt="">
+            </figure>
         </div>
     </section>
 
-    <section class="supporters" aria-label="Destekçilerimiz">
+    <!-- Doğrulanana kadar destekçi bilgileri yayınlanmıyor. -->
+    <section class="supporters" aria-label="Destekçilerimiz" hidden>
         <div class="supporters-head reveal">
             <h2 data-i18n="supporters.title">Destekçilerimiz</h2>
         </div>
@@ -158,7 +174,23 @@
 
     <section class="cta" id="iletisim">
         <h2 data-i18n="cta.title">Bizimle çalışmak veya yatırım hakkında konuşmak ister misin?</h2>
-        <a class="button" href="mailto:hello@erkatech.co" data-i18n="cta.button">İletişime Geç</a>
+        <form class="contact-form" action="https://formspree.io/f/xykryegz" method="POST">
+            <input type="hidden" name="_subject" value="ErkaTech website contact">
+            <input class="contact-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label>
+                <span data-i18n="contact.name">Ad Soyad</span>
+                <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+                <span data-i18n="contact.email">E-posta</span>
+                <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>
+                <span data-i18n="contact.message">Mesaj</span>
+                <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="contact-submit" type="submit" data-i18n="cta.button">İletişime Geç</button>
+        </form>
     </section>
 </main>
 

@@ -102,17 +102,48 @@
     sceneRoot.add(wireGroup);
 
     const probe = new THREE.Group();
-    const probeStem = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.36, 0.36, 1.25, 48),
-        new THREE.MeshStandardMaterial({ color: 0xe8e8e4, roughness: 0.7, transparent: true })
+    const fingerShellMaterial = new THREE.MeshStandardMaterial({ color: 0xdededa, roughness: 0.62, metalness: 0.04, transparent: true });
+    const fingerJointMaterial = new THREE.MeshStandardMaterial({ color: 0x242422, roughness: 0.5, metalness: 0.12, transparent: true });
+    const fingerBase = new THREE.Mesh(
+        new THREE.BoxGeometry(0.68, 0.52, 0.7),
+        fingerShellMaterial
     );
-    probeStem.position.y = 0.62;
-    probe.add(probeStem);
+    fingerBase.position.set(0, 0.9, -0.1);
+    fingerBase.rotation.x = 0.25;
+    probe.add(fingerBase);
+    const upperJoint = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.23, 0.23, 0.62, 32),
+        fingerJointMaterial
+    );
+    upperJoint.rotation.z = Math.PI / 2;
+    upperJoint.position.set(0, 0.56, 0.04);
+    probe.add(upperJoint);
+    const upperPhalanx = new THREE.Mesh(
+        new THREE.BoxGeometry(0.44, 0.62, 0.48),
+        fingerShellMaterial
+    );
+    upperPhalanx.position.set(0, 0.25, 0.05);
+    upperPhalanx.rotation.x = -0.38;
+    probe.add(upperPhalanx);
+    const lowerJoint = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.18, 0.18, 0.5, 32),
+        fingerJointMaterial
+    );
+    lowerJoint.rotation.z = Math.PI / 2;
+    lowerJoint.position.set(0, -0.08, 0.1);
+    probe.add(lowerJoint);
+    const fingertipShell = new THREE.Mesh(
+        new THREE.BoxGeometry(0.32, 0.42, 0.36),
+        fingerShellMaterial
+    );
+    fingertipShell.position.set(0, -0.28, 0.11);
+    fingertipShell.rotation.x = -0.45;
+    probe.add(fingertipShell);
     const probePad = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.5, 0.5, 0.18, 48),
+        new THREE.CylinderGeometry(0.27, 0.27, 0.18, 48),
         new THREE.MeshStandardMaterial({ color: 0x252523, roughness: 0.58, transparent: true })
     );
-    probePad.position.y = -0.01;
+    probePad.position.set(0, -0.54, 0.12);
     probe.add(probePad);
     probe.position.set(contactPoint.x, 1.1, contactPoint.y);
     sceneRoot.add(probe);
@@ -205,7 +236,8 @@
         });
 
         probe.position.y = 1.1 - pressProgress * 1.08;
-        probeStem.material.opacity = probeFade;
+        fingerShellMaterial.opacity = probeFade;
+        fingerJointMaterial.opacity = probeFade;
         probePad.material.opacity = probeFade;
         probe.visible = probeFade > 0.01;
 
